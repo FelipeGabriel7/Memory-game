@@ -88,7 +88,7 @@ h1 {
 }
 
 .back {
-    background-image: url('assets/img/astronaut-gb.png');
+    background-image: url('/assets/img/astronaut-gb.png');
     background-position: center center;
     background-size: cover;
     backface-visibility: hidden;
