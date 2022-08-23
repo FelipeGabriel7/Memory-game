@@ -36,9 +36,12 @@ function verifyCards() {
 
     setTimeout(() => {
       cardOne.classList.remove('reveled-card');
-      twoCard.classList.remove('reveled-card');
       cardOne = ''
-      twoCard = ''
+
+      if (twoCard) {
+        twoCard.classList.remove('reveled-card');
+        twoCard = ''
+      }
     }, 800)
   }
 
@@ -67,6 +70,10 @@ function reveledCard({ target }) {
   } else if (twoCard === '') {
     target.parentNode.classList.add('reveled-card');
     twoCard = target.parentNode;
+  }
+
+  if (twoCard === '') {
+    return;
   }
 
   verifyCards();
